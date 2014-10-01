@@ -83,7 +83,7 @@ items.forEach(function(a){
 
 // //Q5
 
-//Filtered the items and pulled out the objects who's material array has more than 8.
+//Filtered the items and pulled out the objects whose material array has more than 8.
 //Ran it through a map function and console.log'd the title and materials.
 
 var we = items.filter(function(r){
@@ -96,3 +96,14 @@ var Bill = we.map.call(we, function(e) {
 });
 
 //-----------------------------------------------------------------------------//
+
+// //Q6
+
+//Filtered the items and returned ones whose "who_made" === "I_did".
+
+var Q6 = items.filter(function(p){
+  return p.who_made === "i_did";
+
+});
+
+console.log(Q6.length + " items were made by their sellers");
