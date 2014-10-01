@@ -65,3 +65,34 @@ var values = GBP.map.call(GBP, function(obj) {
 
 
  //----------------------------------------------------------------------------//
+
+// //Q4
+
+//Classic case of the .forEach inside a .forEach here.
+//Run the function for materials === "wood" inside the function looking for materials.
+
+items.forEach(function(a){
+    a.materials.forEach(function(b){
+        if(b === "wood"){
+            console.log(a.title);
+        };
+    });
+});
+
+//-----------------------------------------------------------------------------//
+
+// //Q5
+
+//Filtered the items and pulled out the objects who's material array has more than 8.
+//Ran it through a map function and console.log'd the title and materials.
+
+var we = items.filter(function(r){
+  return r.materials.length > 8;
+
+});
+
+var Bill = we.map.call(we, function(e) {
+  console.log (e.title, e.materials);
+});
+
+//-----------------------------------------------------------------------------//
