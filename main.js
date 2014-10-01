@@ -26,4 +26,42 @@ console.log(avg);
 
 //Shorten the number to 2 decimal places.
 
-console.log(avg.toFixed(2));
+console.log("The average is" + " " + avg.toFixed(2));
+
+// ----------------------------------------------------------------------------//
+
+// //Question 2
+
+//Filter the items and return objects whose price is between 14 and 18.
+//Set variable Adam equal to that function.
+//Console.log Adam.
+
+
+var Adam = items.filter(function(i) {
+  return i.price > 14 && i.price < 18;
+
+});
+
+console.log(Adam);
+
+//------------------------------------------------------------------------------//
+
+// //Question 3
+
+//Filter the items and return objects with the currecy code "GBP."
+//Set it to a varable "GBP".
+//Call the object GBP and then ran it with a map function to reurn the title and price.
+
+ var GBP = items.filter(function(j) {
+   return j.currency_code === 'GBP';
+ });
+
+ console.log(GBP);
+
+var values = GBP.map.call(GBP, function(obj) {
+  console.log (obj.title + " $" + obj.price);
+
+});
+
+
+ //----------------------------------------------------------------------------//
